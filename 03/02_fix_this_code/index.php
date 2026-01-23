@@ -18,7 +18,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE PDO::ERRMODE_SILENT);
 
     echo "Connected to database!";
-
-catch (PDOException $e {
+}
+catch (PDOException $e) {
     echo "Database error: " . $e
 }
