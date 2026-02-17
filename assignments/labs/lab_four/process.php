@@ -2,7 +2,21 @@
 require "includes/header.php";
 //  TODO: connect to the database 
 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $name = "db";
+    $connection = "";
+
+    $connection = mysqli_connect($servername, $username, $password, $name);
+
+
 //   TODO: Grab form data (no validation or sanitization for this lab)
+
+    $firstName = htmlspecialchars($_POST['first_name']);
+    $lastName = htmlspecialchars($_POST['last_name']);
+    $email = htmlspecialchars($_POST['email']);
+
 
 /*
   1. Write an INSERT statement with named placeholders
@@ -11,7 +25,6 @@ require "includes/header.php";
   4.
 
 */
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +42,7 @@ require "includes/header.php";
 
         <!-- TODO: Display a confirmation message -->
         <!-- Example: "Thanks, Name! You have been added to our mailing list." -->
-
-
+        Welcome, <?php echo $_POST["first_name"]; ?>! You have been added to our mailing list.<br>
         <p class="mt-3">
             <a href="subscribers.php">View Subscribers</a>
         </p>
