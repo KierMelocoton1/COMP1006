@@ -4,6 +4,8 @@ require "includes/connect.php";
 require "includes/header.php";
 
 // Get all products, newest first
+$sql = "SELECT * FR products ORDER BY created_at DESC";
+// Prepare the query
 
 ?>
 
